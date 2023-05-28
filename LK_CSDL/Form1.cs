@@ -16,13 +16,13 @@ namespace LK_CSDL
         public Form1()
         {
             InitializeComponent();
-            ShowData();
+         //   ShowData("sp_select","@tenBang","KHACHHANG");
         }
         string cnnStr = "Data Source=YUU\\SQLEXPRESS;Initial Catalog=THK_QLBH;Persist Security Info=True;User ID=sa;Password=1234";
 
 
 
-        void ShowData(string tenBang = "KHACHHANG")
+        void ShowData(string tenSP, string thamSo, string giatri)
         {
             try
             {
@@ -31,8 +31,8 @@ namespace LK_CSDL
 
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_select";
-                cmd.Parameters.Add("@tenBang", SqlDbType.NVarChar).Value = tenBang;
+                cmd.CommandText = tenSP;
+                cmd.Parameters.Add(thamSo, SqlDbType.NVarChar).Value = giatri;
                 SqlDataReader sqlDR = cmd.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(sqlDR);
@@ -47,6 +47,22 @@ namespace LK_CSDL
                 throw ex;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ShowData("sp_select", "@tenBang", "KHACHHANG");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ShowData("sp_select", "@tenBang", "NHACUNGCAP");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ShowData("sp_select", "@tenBang", "LOAIHANG");
+        }
+
 
         void AddDataKHACHHANG(string tenKH, string diaChi, string stk, string dt)
         {
@@ -74,21 +90,6 @@ namespace LK_CSDL
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ShowData();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ShowData("NHACUNGCAP");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            ShowData("LOAIHANG");
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string userName = this.usernameTextBox.Text;
@@ -96,7 +97,16 @@ namespace LK_CSDL
             string stk = this.bankNumberTextBox.Text;
             string dt = this.phoneNumberTextBox.Text;
             AddDataKHACHHANG(userName, diaChi, stk, dt);
-            ShowData();
+            ShowData("sp_select", "@tenBang", "KHACHHANG");
         }
+
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string keyword = this.textBox1.Text;
+            ShowData("SearchColumns", "@keyword", keyword);
+        }
+
     }
 }
