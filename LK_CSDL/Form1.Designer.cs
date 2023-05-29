@@ -98,7 +98,7 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.Salmon;
-            this.button3.Location = new System.Drawing.Point(689, 16);
+            this.button3.Location = new System.Drawing.Point(675, 16);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 41);
             this.button3.TabIndex = 3;
@@ -225,7 +225,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button5.Location = new System.Drawing.Point(136, 11);
+            this.button5.Location = new System.Drawing.Point(102, 11);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(104, 50);
             this.button5.TabIndex = 18;
@@ -236,7 +236,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button6.Location = new System.Drawing.Point(269, 11);
+            this.button6.Location = new System.Drawing.Point(197, 11);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 50);
             this.button6.TabIndex = 18;

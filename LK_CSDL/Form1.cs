@@ -29,7 +29,6 @@ namespace LK_CSDL
             {
                 SqlConnection conn = new SqlConnection(cnnStr);
                 conn.Open();
-
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = tenSP;

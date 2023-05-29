@@ -7,6 +7,7 @@ using Telegram.Bot.Polling;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types;
 using Telegram.Bot;
+using BotHoa;
 
 namespace BotBanHang
 {
@@ -140,31 +141,14 @@ namespace BotBanHang
                 {
                     reply = "FeedBack Giáo viên:🥲 Môn học lập trình Windows thầy Đỗ Duy Cốp. Giảng quá xá là HAY!😍😍";
                 }
-                else if (messLow.StartsWith("dh "))
-                {
-                    string soHD = messageText.Substring(3);
-                    //reply = HoiData.baoMotHoaDon(soHD, "");
-                }
                 else if (messLow.StartsWith("kh "))
                 {
-                    string tenKH = messageText.Substring(3);
-                    //reply = HoiData.baoMotKhachHang(tenKH);
+                    string tenKh = messageText.Substring(3);
+                    TimKiem tk = new TimKiem();
+                    reply = tk.timKhachHang("%" + tenKh.Replace(' ', '%') + "%");
                 }
-                else if (messLow.StartsWith("sao roi"))
-                {
-                    DateTime NTN = new DateTime();
-                    NTN = DateTime.Now;
-                    int ngay = Convert.ToInt32(NTN.Day.ToString());
-                    int thang = Convert.ToInt32(NTN.Month.ToString());
-                    int nam = Convert.ToInt32(NTN.Year.ToString());
-                    //reply = HoiData.baoMotNgay(ngay, thang, nam);
-                }
-                //else if (messLow.StartsWith("tk "))
-                //{
-                //    string tenKH = messageText.Substring(3);
-                //    reply = HoiData.baoMotKhachHang(tenKH);
-                //}
-                else // Nếu k phải là thằng nào đặc biệt thì => hát cho Pạn nghe
+
+                else // Nếu k phải là thằng nào đặc biệt thì => hát cho Pạn nghe.
                 {
                     reply = "🤡Chúa hề said: " + messageText;
                 }
@@ -213,6 +197,7 @@ namespace BotBanHang
         {
             this.Visible = false;
         }
+
     }
 }
 
