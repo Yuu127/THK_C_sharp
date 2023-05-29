@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BotBanHang;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LK_CSDL
+namespace BotHoa
 {
     internal static class Program
     {
@@ -16,7 +17,7 @@ namespace LK_CSDL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formDangNhap());
+            Application.Run(new formBot());
         }
     }
 }

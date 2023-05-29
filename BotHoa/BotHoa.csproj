@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{528BCE53-1D49-4212-B5B9-AAE98736D3B0}</ProjectGuid>
+    <ProjectGuid>{960A5182-6AD0-4F9E-9D8F-93CABC1F0C5D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LK_CSDL</RootNamespace>
-    <AssemblyName>LK_CSDL</AssemblyName>
+    <RootNamespace>BotHoa</RootNamespace>
+    <AssemblyName>BotHoa</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -62,25 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="formBot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formDangNhap.Designer.cs">
-      <DependentUpon>formDangNhap.cs</DependentUpon>
+    <Compile Include="formBot.Designer.cs">
+      <DependentUpon>formBot.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formDangNhap.resx">
-      <DependentUpon>formDangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="formBot.resx">
+      <DependentUpon>formBot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,7 +81,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -105,21 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mèo xấu xí 1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BotHoa\BotHoa.csproj">
-      <Project>{960a5182-6ad0-4f9e-9d8f-93cabc1f0c5d}</Project>
-      <Name>BotHoa</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\9943355ee55b199cc8aad8c946e20d6b.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eb9f36351a4805c6fcd36f69d5a2008e.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

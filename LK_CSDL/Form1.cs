@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BotBanHang;
 
 namespace LK_CSDL
 {
@@ -107,6 +108,7 @@ namespace LK_CSDL
             string keyword = this.textBox1.Text;
             ShowData("SearchColumns", "@keyword", keyword);
         }
+
 
     }
 }
