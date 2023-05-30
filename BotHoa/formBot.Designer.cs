@@ -38,7 +38,7 @@
             this.txtLog.Name = "txtLog";
             this.txtLog.Size = new System.Drawing.Size(698, 382);
             this.txtLog.TabIndex = 0;
-           // this.txtLog.TextChanged += new System.EventHandler(this.txtLog_TextChanged);
+            this.txtLog.TextChanged += new System.EventHandler(this.txtLog_TextChanged);
             // 
             // formBot
             // 

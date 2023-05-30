@@ -83,6 +83,16 @@ namespace LK_CSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hoaxinh {
+            get {
+                object obj = ResourceManager.GetObject("hoaxinh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mèo_xấu_xí_1 {
             get {
                 object obj = ResourceManager.GetObject("mèo xấu xí 1", resourceCulture);

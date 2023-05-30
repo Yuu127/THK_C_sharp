@@ -16,7 +16,7 @@ namespace LK_CSDL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formDangNhap());
+            Application.Run(new Form1());
         }
     }
 }

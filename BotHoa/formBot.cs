@@ -141,9 +141,9 @@ namespace BotBanHang
                 {
                     reply = "FeedBack Giáo viên:🥲 Môn học lập trình Windows thầy Đỗ Duy Cốp. Giảng quá xá là HAY!😍😍";
                 }
-                else if (messLow.StartsWith("kh "))
+                else if (messLow.StartsWith("/find "))
                 {
-                    string tenKh = messageText.Substring(3);
+                    string tenKh = messageText.Substring(6);
                     TimKiem tk = new TimKiem();
                     reply = tk.timKhachHang("%" + tenKh.Replace(' ', '%') + "%");
                 }
@@ -198,6 +198,10 @@ namespace BotBanHang
             this.Visible = false;
         }
 
+        private void txtLog_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
